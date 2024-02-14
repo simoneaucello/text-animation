@@ -6,20 +6,23 @@
 
 body{
   font-family: "Montserrat", sans-serif;
-  background-color: #9b9595;
-  /* filter: blur(3px); */
   
 }
 
-.container, .container-slide {
+.container {
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(https://getwallpapers.com/wallpaper/full/a/d/b/485777.jpg);
+  background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700342363.jpg);
   background-size: cover;
- 
+}
+
+.title {
+  font-weight: 800;
+  font-size: 8rem;
+}
 
 .title-word {
   animation: color-animation 2s linear infinite;
@@ -49,7 +52,7 @@ body{
   --color-3: #E4A9A8;
 }
 
-/* @keyframes color-animation {
+@keyframes color-animation {
   0%    {color: var(--color-1)}
   32%   {color: var(--color-1)}
   33%   {color: var(--color-2)}
@@ -57,41 +60,26 @@ body{
   66%   {color: var(--color-3)}
   99%   {color: var(--color-3)}
   100%  {color: var(--color-1)}
-} */
-
-
-
-.title {
-  font-weight: 800;
-  font-size: 8rem;
-  text-transform: uppercase;
 }
 
 
 /* FLIP  */
 
-.waviy {
-  position: relative;
- 
-}
+
 .waviy span {
-  position: relative;
-  display: inline-block;
+  display: block;
   font-size: 10rem;
   font-weight: 600;
   color: black;
-  text-transform: uppercase;
   animation: flip 2s infinite;
   
 }
-/* 
+
 @keyframes flip {
   0%,20% {
-    transform: rotateY(360deg) 
+    transform: rotatey(360deg) 
   }
-} */
-
-
+}
 
 
 /*  SLIDE  */
@@ -99,21 +87,17 @@ body{
 .container, .slide{
 color: black;
 font-size: 2rem;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
 }
 
 
 .animation {
-  height:50px;
+  height:40px;
   overflow:hidden;
   margin-left: 1rem;
 }
 
 .animation > div > div {
-  height:45px;
+  height:40px;
   margin-bottom: 50px;
   display:inline-block;
 }
@@ -156,26 +140,24 @@ h1.glow span {
   animation: glowing 2s linear infinite;
 }
 
-/* @keyframes glowing {
+@keyframes glowing {
   0%, 100% {
     color: #fff;
-    filter: blur(2px);
-    text-shadow: 0 0 10px #00b3ff,
-      0 0 20px #00b3ff,
-      0 0 40px #00b3ff,
-      0 0 80px #00b3ff,
-      0 0 120px #00b3ff,
-      0 0 200px #00b3ff,
-      0 0 300px #00b3ff,
-      0 0 400px #00b3ff;
+    text-shadow: 
+    0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff,
+    0 0 200px #00b3ff,
+    0 0 300px #00b3ff;
   } 
   
   5%, 95% {
     color: #111;
     text-shadow: none;
-    filter: blur(0px);
   }
-} */
+}
 
 h1.glow span:nth-child(1){
   animation-delay: 0s;
@@ -210,7 +192,8 @@ h1.glow span:nth-child(7){
 div.ugo {
   font-size: 8rem;
   font-weight: 300;
-  /* transition: font-weight 300ms ease-in-out; */
+  transition: font-weight .25s ease-in-out;
+  cursor: pointer;
 }
 
 div.ugo:hover {
@@ -222,15 +205,14 @@ div.ugo:hover {
 
 
 h1.transition {
-  color: #484848;
+  color: black;
   font-size: 100px;
   font-weight: bold;
-  font-family: monospace;
   letter-spacing: 7px;
-  cursor: pointer
+  cursor: pointer;
 }
 .transition span{
-  /* transition: .5s linear */
+  transition: .5s linear
 }
 .transition:hover span:nth-child(1){
   margin-right: 0px;
@@ -240,11 +222,12 @@ h1.transition {
   margin-left: 5px;
 }
 .transition:hover span:nth-child(2){
-  margin-left: 30px
+  margin-left: 5px
 }
 .transition:hover span{
   color: #fff;
-  text-shadow: 0 0 10px #fff,
-               0 0 20px #fff, 
-               0 0 40px #fff;
+  text-shadow: 
+  0 0 10px #fff,
+  0 0 20px #fff, 
+  0 0 40px #fff;
 }
