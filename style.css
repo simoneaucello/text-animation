@@ -1,0 +1,250 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  background-color: #9b9595;
+  /* filter: blur(3px); */
+  
+}
+
+.container, .container-slide {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://getwallpapers.com/wallpaper/full/a/d/b/485777.jpg);
+  background-size: cover;
+ 
+
+.title-word {
+  animation: color-animation 2s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+/* @keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+} */
+
+
+
+.title {
+  font-weight: 800;
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+
+
+/* FLIP  */
+
+.waviy {
+  position: relative;
+ 
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 10rem;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  
+}
+/* 
+@keyframes flip {
+  0%,20% {
+    transform: rotateY(360deg) 
+  }
+} */
+
+
+
+
+/*  SLIDE  */
+
+.container, .slide{
+color: black;
+font-size: 2rem;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+}
+
+.animation > div > div {
+  height:45px;
+  margin-bottom: 50px;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+  width: 500px;
+  text-align: center;
+}
+
+.first div {
+  background-color:#20a7d8;
+}
+.second div {
+  background-color:#CD921E;
+}
+.third div {
+  background-color:#c10528;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -90px;}
+  30% {margin-top: -90px;}
+  40% {margin-top: -180px;}
+  60% {margin-top: -180px;}
+  70% {margin-top: -90px;}
+  80% {margin-top: -90px;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+
+ /* GLOWING  */
+
+h1.glow span {
+  font-size: 10rem;
+  color: #111;
+  animation: glowing 2s linear infinite;
+}
+
+/* @keyframes glowing {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 80px #00b3ff,
+      0 0 120px #00b3ff,
+      0 0 200px #00b3ff,
+      0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  } 
+  
+  5%, 95% {
+    color: #111;
+    text-shadow: none;
+    filter: blur(0px);
+  }
+} */
+
+h1.glow span:nth-child(1){
+  animation-delay: 0s;
+}
+
+h1.glow span:nth-child(2){
+  animation-delay: .25s;
+}
+
+h1.glow span:nth-child(3){
+  animation-delay: .5s;
+}
+
+h1.glow span:nth-child(4){
+  animation-delay: .75s;
+}
+
+h1.glow span:nth-child(5){
+  animation-delay: 1s;
+}
+
+h1.glow span:nth-child(6){
+  animation-delay: 1.25s;
+}
+
+h1.glow span:nth-child(7){
+  animation-delay: 1.5s;
+}
+
+ /* TRANSITION 1  */
+
+div.ugo {
+  font-size: 8rem;
+  font-weight: 300;
+  /* transition: font-weight 300ms ease-in-out; */
+}
+
+div.ugo:hover {
+  font-weight: 900;
+}
+
+
+/* TRANSITION 2 */
+
+
+h1.transition {
+  color: #484848;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer
+}
+.transition span{
+  /* transition: .5s linear */
+}
+.transition:hover span:nth-child(1){
+  margin-right: 0px;
+}
+.transition:hover span:nth-child(1):after{
+  content: url(https://emoji.slack-edge.com/T91QPE3BP/ugodeughi/52e1ebbdd180b4d6.jpg);
+  margin-left: 5px;
+}
+.transition:hover span:nth-child(2){
+  margin-left: 30px
+}
+.transition:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+}
