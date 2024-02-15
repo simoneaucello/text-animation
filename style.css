@@ -10,7 +10,6 @@ body{
 }
 
 .container {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +20,7 @@ body{
 
 .title {
   font-weight: 800;
-  font-size: 8rem;
+  font-size: 5rem;
 }
 
 .title-word {
@@ -66,9 +65,8 @@ body{
 /* FLIP  */
 
 
-.waviy span {
-  display: block;
-  font-size: 10rem;
+.waviy {
+  font-size: 5rem;
   font-weight: 600;
   color: black;
   animation: flip 2s infinite;
@@ -77,7 +75,7 @@ body{
 
 @keyframes flip {
   0%,20% {
-    transform: rotatey(360deg) 
+    transform: rotatex(360deg) 
   }
 }
 
@@ -135,12 +133,12 @@ font-size: 2rem;
  /* GLOWING  */
 
 h1.glow span {
-  font-size: 10rem;
+  font-size: 5rem;
   color: #111;
   animation: glowing 2s linear infinite;
 }
 
-@keyframes glowing {
+ @keyframes glowing {
   0%, 100% {
     color: #fff;
     text-shadow: 
@@ -157,7 +155,7 @@ h1.glow span {
     color: #111;
     text-shadow: none;
   }
-}
+} 
 
 h1.glow span:nth-child(1){
   animation-delay: 0s;
@@ -190,7 +188,7 @@ h1.glow span:nth-child(7){
  /* TRANSITION 1  */
 
 div.ugo {
-  font-size: 8rem;
+  font-size: 4rem;
   font-weight: 300;
   transition: font-weight .25s ease-in-out;
   cursor: pointer;
@@ -206,7 +204,7 @@ div.ugo:hover {
 
 h1.transition {
   color: black;
-  font-size: 100px;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: 7px;
   cursor: pointer;
